@@ -1,5 +1,5 @@
 import multiprocessing
-import os
+import ostest
 import sys
 import threading
 from time import sleep
@@ -7,13 +7,13 @@ from time import sleep
 
 def thread_demo(index):
     while True:
-        print(f"thread_demo {index} pid={os.getpid()} thread_name={threading.current_thread().name}")
+        print(f"thread_demo {index} pid={ostest.getpid()} thread_name={threading.current_thread().name}")
         sleep(1)
 
 
 def process_demo(index):
     while True:
-        print(f"process_demo {index} pid={os.getpid()} thread_name={threading.current_thread().name}")
+        print(f"process_demo {index} pid={ostest.getpid()} thread_name={threading.current_thread().name}")
         sleep(1)
 
 
